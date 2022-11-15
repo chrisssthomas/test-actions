@@ -1,0 +1,6 @@
+name: Test sh script
+runs:
+    steps:
+        - name: Check sh script exits and fails job
+          shell: bash
+          run: sh scripts/test.sh
