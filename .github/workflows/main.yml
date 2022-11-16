@@ -1,13 +1,10 @@
-name: Test sh script
-on:
-    pull_request:
-        branches:
-            - main
-    push:
-        branches:
-            - "main"
-runs:
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
     steps:
-        - name: Check sh script exits and fails job
-          shell: bash
-          run: sh scripts/test.sh
+      - uses: actions/checkout@v3
+      - id: foo
+        uses: actions/action@v1
